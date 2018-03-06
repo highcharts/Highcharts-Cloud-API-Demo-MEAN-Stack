@@ -1,0 +1,40 @@
+<html ng-app="App">
+
+  <head>
+    <title> HCCloud API and the MEAN stack</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="Controller">
+
+    <div>
+      <label class="bigLabel" id="readDataFromDBLabelTitle">Read data from database</label>
+      <br/>
+      <button id="readDataFromDB" ng-click="getRequest('readDataFromDB','readDataFromDBLabel')">Read data</button>
+      <label class="smallLabel" id="readDataFromDBLabel">Status: {{ readDataFromDBLabel }}</label>
+    </div>
+    <div>
+      <label class="bigLabel" id="sendToHCCloudLabelTitle">Send data to Highcharts cloud</label>
+      <br/>
+      <button id="sendToHCCloud" ng-click="getRequest('sendToHCCloud','sendToHCCloudLabel')">Send/create chart</button>
+      <label class="smallLabel" id="sendToHCCloudLabel">Status: {{ sendToHCCloudLabel }}</label>
+    </div>
+
+    <div>
+      <label class="bigLabel" id="duplicateChartLabelTitle">duplicate chart</label>
+      <br/>
+      <button id="duplicateChart" ng-click="getRequest('duplicateChart','duplicateChartLabel')">Duplicate chart</button>
+      <label class="smallLabel" id="duplicateChartLabel">Status: {{ duplicateChartLabel }}</label>
+    </div>
+    <div>
+      <label class="bigLabel" id="deleteChartLabelTitle">Delete chart</label>
+      <br/>
+      <button id="deleteChart" ng-click="getRequest('deleteChart','deleteChartLabel')">Delete chart</button>
+      <label class="smallLabel" id="deleteChartLabel">Status: {{ deleteChartLabel }}</label>
+    </div>
+
+  </body>
+    
+</html>
